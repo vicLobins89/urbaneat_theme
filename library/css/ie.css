@@ -582,7 +582,10 @@ NAVIGATION STYLES
         position: absolute;
         width: calc(100% - 4rem);
         height: calc(100% - 20rem);
-        margin: 7rem 0; }
+        margin: 7rem 0;
+        transform-origin: center;
+        -webkit-transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out; }
       .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-core,
       .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-core {
         background: #e6ad19; }
@@ -620,6 +623,9 @@ NAVIGATION STYLES
         .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-street a,
         .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-street a {
           background: #37499a; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li:hover:before,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li:hover:before {
+        transform: scale(1.05); }
       .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li a,
       .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li a {
         display: block;

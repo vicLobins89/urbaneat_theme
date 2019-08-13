@@ -187,6 +187,8 @@ NAVIGATION STYLES
                     width: calc(100% - 4rem);
                     height: calc(100% - 20rem);
                     margin: 7rem 0;
+                    transform-origin: center;
+                    @include transition(transform 0.2s ease-in-out);
                 }
                 
                 &.menu-core {
@@ -214,6 +216,10 @@ NAVIGATION STYLES
                     background: #e40134;
                     &:before { background-image: url(../images/menu-street.jpg); }
                     a { background: #37499a; }
+                }
+                
+                &:hover:before {
+                    transform: scale(1.05);
                 }
 
 				a {
