@@ -1,0 +1,60 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Variables
+
+******************************************************************/
+
+/*********************
+COLORS
+Choosing your colors http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+$light-gray:        #e5e5e5;
+$gray:              #53575a;
+$meta-gray:         #808080;
+$dark-gray:         #142128;
+$text-color:        $black;
+
+$blue:				#698cb7;
+$dark-blue:			#306aa1;
+$alt-blue:			#3f4b96;
+$pale-blue:			#bedbd9;
+$teal:				#0fa69d;
+
+$yellow:			#ffcc00;
+
+$dark-green:		#133e2f;
+$green:				#0b6b4e;
+$green-01:    		#c2cf2e;
+$green-02:    		#95ba3a;
+$pale-green:		#9fc938;
+
+$orange:			#ee8237;
+$dark-orange:	    #cb4f24;
+
+$light-brown:		#f5f3f1;
+$mid-brown:			#e0dbd6;
+$brown:				#cbc3bb;
+$dark-brown:		#766e63;
+
+$red:				#c14322;
+$red-01:			#c40055;
+$red-02:			#c7345c;
+$magenta:           #e20056;
+$pink:              #e72462;
+
+$link-color:        $black;
+$link-hover:        lighten($link-color, 30%);
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;

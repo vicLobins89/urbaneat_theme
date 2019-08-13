@@ -1,0 +1,13 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+******************************************************************/
+
+.body:not(.is-mobile) {
+    .primary-nav > li:not(.menu-logo) ul.sub-menu li .menu-item-description, .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li .menu-item-description {
+        min-height: 3rem;
+    }
+}

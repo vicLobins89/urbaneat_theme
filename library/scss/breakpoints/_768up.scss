@@ -1,0 +1,444 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html {
+	font-size: 14px;
+}
+
+.hover-link + p {
+	top: auto;
+	bottom: 0;
+}
+
+p, .p {
+	font-size: 1.2em;
+}
+
+.mobile {
+    display: none !important;
+}
+
+.desktop {
+    display: block !important;
+}
+
+.color-block {
+    font-size: 3.25rem;
+}
+
+.narrow-para {
+    max-width: 40%;
+}
+    
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+.featured-image {
+	width: 100%;
+    margin-left: auto;
+}
+
+.page-title {
+	font-size: 1rem;
+}
+
+.entry-content {
+	padding: 3rem 3rem 2rem;
+	font-size: 1rem;
+    
+    &.filter_wrapper {
+        padding-bottom: 3rem;
+    }
+	
+	ul {
+		&.col-2 {
+			padding: 0;
+			
+			li {
+				width: 48%;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.featured {
+	> div {
+		max-width: none !important;
+	}
+    
+    img {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.featured-copy {
+    max-width: 30%;
+    top: 28%;
+    right: 10%;
+    bottom: auto;
+    
+    .page-core & {
+        top: auto;
+        right: auto;
+        bottom: 3%;
+        left: 49%;
+    }
+    
+    .page-hot-food &,
+    .page-cold-food & {
+        right: 45%;
+    }
+    
+    .page-roots & {
+        .roots-leaves01 {
+            width: 17%;
+            left: 0;
+            top: 45%;
+        }
+        
+        .roots-leaves02 {
+            width: 17%;
+            right: 0;
+            top: 20%;
+        }
+    }
+    
+    h1 {
+        font-size: 10rem;
+        font-size: 10vw;
+        
+        &.heading-cold-food,
+        &.heading-our-food {
+            font-size: 6vw;
+            
+            span {
+                font-size: 92%;
+            }
+        }
+        
+        &.heading-deli {
+            font-size: 5rem;
+            font-size: 5.5vw;
+            letter-spacing: .3rem;
+        }
+        
+        &.heading-center {
+            font-size: 6.35rem;
+            font-size: 6.35vw;
+        }
+        
+         &.heading-dietary {
+            font-size: 5rem;
+            font-size: 5vw;
+        }
+    }
+    
+    p {
+        margin-right: 2em;
+        
+        .page-dietary-information & {
+            font-size: 1.3vw;
+        }
+    }
+}
+
+.logo-thumbs-wrapper {
+    margin: 1rem 3rem 3rem;
+    
+    .logo-thumb {
+        width: 50%;
+    }
+}
+
+.ranges-wrapper {
+    .wp-caption {
+        width: 50% !important;
+        
+        .wp-caption-text {
+            bottom: 4rem;
+            right: 5rem;
+        }
+        
+        &:last-child {
+            .wp-caption-text {
+                right: auto;
+                left: 5rem;
+            }
+        }
+    }
+}
+
+.range-wrapper {
+    padding: 0 3rem;
+    
+    .wp-caption {
+        width: 25% !important;
+        font-size: 1rem;
+        
+        .page-hot-food & {
+            width: 30% !important;
+        }
+        
+        .page-roots & {
+            width: 40%!important;
+            padding: 2rem 3rem;
+        }
+    }
+    
+    .page-deli & {
+        padding: 0 6rem;
+        
+        .wp-caption {
+            padding: 1.5rem;
+        }
+    }
+}
+
+.color-boxes-wrapper {
+    padding: 0;
+    
+    .color-box {
+        width: 50%;
+        width: calc(50% - 2rem);
+        margin: 1rem;
+    }
+}
+
+.black-box {
+	padding: 1rem;
+}
+
+.blog-wrapper {
+    .text {
+        span {
+            font-size: 1.15em;
+		}
+	}
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	> div {
+		max-width: 760px;
+	}
+}
+
+.flex {
+	@include prefix(flex-direction, row, webkit ms);
+	
+	.flex-panel {
+		width: 33.333%;
+	}
+}
+
+.gallery {
+	&.gallery-columns-2 {
+		.gallery-item {
+			width: 50%;
+		}
+	}
+}
+
+.row {    
+    &.single-content {
+        background: $light-gray;
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        .col-12 {
+            padding: 3rem 7rem;
+            background: $white;
+        }
+    }
+	
+	&.image-left,
+	&.image-right {
+		> .cf { 
+			@include prefix(flex-direction, row, webkit moz ms);
+		}
+	}
+    
+    &.text-block {
+        .col-12 {
+            padding: 3.5rem;
+        }
+        
+        &.tb-yellow .col-12 {
+            img {
+                margin-top: -6.5rem;
+                margin-bottom: 0;
+            }
+        }
+        
+        &.tb-blue-01 {
+            h2 {
+                width: 50%;
+            }
+        }
+        
+        &.tb-teal {
+            .col-12 {
+                h2 {
+                    margin-top: -6rem;
+                }
+            }
+        }
+        
+        .offset-lb {
+            margin: 0 2rem -6rem -7rem;
+        }
+        
+        &.tb-list {
+            ul {
+                padding-right: 0;
+                float: left;
+                width: 40%;
+            }
+            
+            img {
+                float: right;
+                max-width: 50%;
+            }
+        }
+        
+        &.narrow {
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    &.border-t-b {
+        .col-6 {
+            &:first-child {
+                padding-right: 0;
+                
+                .wp-caption-text {
+                    bottom: -23px;
+                    top: auto;
+                }
+            }
+            
+            &:last-child {
+                padding: 5rem;
+                
+                .deli {
+                    max-width: 75%;
+                }
+            }
+        }
+    }
+    
+    &.street-two-col,
+    &.roots-two-col {
+        .col-6 {
+            &:last-child {
+                padding: 5rem 0 0 0;
+                
+                p {
+                    max-width: 70%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+    &.roots-two-col {
+        .col-6 {
+            h2 {
+                margin: 1rem 0 !important;
+            }
+        }
+    }
+    
+    &.street-two-col {
+        text-align: left;
+    }
+}
+
+.equal-height {
+	.col-6 {
+		border: 1.5rem solid $white;
+		
+		img {
+			margin-top: 3rem !important;
+
+			&:first-child { margin-top: 0 !important; }
+		}
+	}
+}
+
+.gallery {
+	&.gallery-columns-4 {
+		.gallery-item {
+			width: 25%;
+		}
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+#sidebar1 {
+    padding-right: 2rem;
+}
+
+.widgettitle {
+	border-bottom: 2px solid $text-color;
+	margin-bottom: 0.75em;
+}
+
+.widget {
+	padding: 0 10px;
+	margin: 2.2em 0;
+
+	ul {
+		li {
+			margin-bottom: 0.75em;
+
+			ul {
+				margin-top: 0.75em;
+				padding-left: 1em;
+			}
+		}
+	}
+}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.social-footer {
+    margin: 2rem 2rem 0;
+    transform: none;
+    font-size: 1.3rem;
+}
+
+.footer-logo {
+    margin: 0;
+    transform: none;
+}
+
+.footer-nav {
+	.nav {
+		margin: 1.5rem;
+    }
+}

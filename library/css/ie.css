@@ -1,0 +1,712 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: IE Stylesheet
+
+Import all the styles the standard stylesheet gets, only
+without the media queries.
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+All the BASE styles are called already since IE can
+read those. Below we import the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Variables
+
+******************************************************************/
+/*********************
+COLORS
+Choosing your colors http://0to255.com/
+*********************/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Typography
+
+******************************************************************/
+/*********************
+FONTFACE
+*********************/
+@font-face {
+  font-family: 'Kapra Neue';
+  src: url("../../fonts/KapraNeuePro-RegularRd.woff2") format("woff2"), url("../../fonts/KapraNeuePro-RegularRd.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Kapra Neue';
+  src: url("../../fonts/KapraNeuePro-MediumRd.woff2") format("woff2"), url("../../fonts/KapraNeuePro-MediumRd.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Kapra Neue';
+  src: url("../../fonts/KapraNeuePro-SemiBoldRd.woff2") format("woff2"), url("../../fonts/KapraNeuePro-SemiBoldRd.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'Kapra Neue';
+  src: url("../../fonts/KapraNeuePro-BoldRd.woff2") format("woff2"), url("../../fonts/KapraNeuePro-BoldRd.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Cera Pro';
+  src: url("../../fonts/CeraPro-Bold.woff2") format("woff2"), url("../../fonts/CeraPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Cera Pro';
+  src: url("../../fonts/CeraPro-Medium.woff2") format("woff2"), url("../../fonts/CeraPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Cera Pro';
+  src: url("../../fonts/CeraPro-Regular.woff2") format("woff2"), url("../../fonts/CeraPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Cera Pro';
+  src: url("../../fonts/CeraPro-Light.woff2") format("woff2"), url("../../fonts/CeraPro-Light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal; }
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Mixins Stylesheet
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/* @include transition(all 0.2s ease-in-out); */
+/*********************
+CSS3 GRADIENTS
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/*********************
+VENDOR
+*********************/
+/*
+.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
+*/
+/*********************
+CSS ANIMATIONS
+*********************/
+/*
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+*/
+/*********************
+BOX SHADOW
+*********************/
+/*********************
+PLACEHOLDER
+*********************/
+/*
+.foo {
+  @include placeholder {
+    color: green;
+  }
+}
+
+@include placeholder {
+  color: red;
+}
+*/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: IE Grid Styles
+
+******************************************************************/
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: 481px and Up Stylesheet
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+html {
+  font-size: 13px; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left; }
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right; }
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both; }
+
+/* end .entry-content */
+.gallery.gallery-columns-4 .gallery-item {
+  width: 50%;
+  float: left; }
+
+/*********************
+FOOTER STYLES
+*********************/
+/* end .footer-links */
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+html {
+  font-size: 14px; }
+
+.hover-link + p {
+  top: auto;
+  bottom: 0; }
+
+p, .p {
+  font-size: 1.2em; }
+
+.mobile {
+  display: none !important; }
+
+.desktop {
+  display: block !important; }
+
+.color-block {
+  font-size: 3.25rem; }
+
+.narrow-para {
+  max-width: 40%; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.featured-image {
+  width: 100%;
+  margin-left: auto; }
+
+.page-title {
+  font-size: 1rem; }
+
+.entry-content {
+  padding: 3rem 3rem 2rem;
+  font-size: 1rem; }
+  .entry-content.filter_wrapper {
+    padding-bottom: 3rem; }
+  .entry-content ul.col-2 {
+    padding: 0; }
+    .entry-content ul.col-2 li {
+      width: 48%;
+      display: inline-block; }
+
+.featured > div {
+  max-width: none !important; }
+.featured img {
+  margin: 0;
+  width: 100%;
+  height: auto; }
+
+.featured-copy {
+  max-width: 30%;
+  top: 28%;
+  right: 10%;
+  bottom: auto; }
+  .page-core .featured-copy {
+    top: auto;
+    right: auto;
+    bottom: 3%;
+    left: 49%; }
+  .page-hot-food .featured-copy, .page-cold-food .featured-copy {
+    right: 45%; }
+  .page-roots .featured-copy .roots-leaves01 {
+    width: 17%;
+    left: 0;
+    top: 45%; }
+  .page-roots .featured-copy .roots-leaves02 {
+    width: 17%;
+    right: 0;
+    top: 20%; }
+  .featured-copy h1 {
+    font-size: 10rem;
+    font-size: 10vw; }
+    .featured-copy h1.heading-cold-food, .featured-copy h1.heading-our-food {
+      font-size: 6vw; }
+      .featured-copy h1.heading-cold-food span, .featured-copy h1.heading-our-food span {
+        font-size: 92%; }
+    .featured-copy h1.heading-deli {
+      font-size: 5rem;
+      font-size: 5.5vw;
+      letter-spacing: .3rem; }
+    .featured-copy h1.heading-center {
+      font-size: 6.35rem;
+      font-size: 6.35vw; }
+    .featured-copy h1.heading-dietary {
+      font-size: 5rem;
+      font-size: 5vw; }
+  .featured-copy p {
+    margin-right: 2em; }
+    .page-dietary-information .featured-copy p {
+      font-size: 1.3vw; }
+
+.logo-thumbs-wrapper {
+  margin: 1rem 3rem 3rem; }
+  .logo-thumbs-wrapper .logo-thumb {
+    width: 50%; }
+
+.ranges-wrapper .wp-caption {
+  width: 50% !important; }
+  .ranges-wrapper .wp-caption .wp-caption-text {
+    bottom: 4rem;
+    right: 5rem; }
+  .ranges-wrapper .wp-caption:last-child .wp-caption-text {
+    right: auto;
+    left: 5rem; }
+
+.range-wrapper {
+  padding: 0 3rem; }
+  .range-wrapper .wp-caption {
+    width: 25% !important;
+    font-size: 1rem; }
+    .page-hot-food .range-wrapper .wp-caption {
+      width: 30% !important; }
+    .page-roots .range-wrapper .wp-caption {
+      width: 40% !important;
+      padding: 2rem 3rem; }
+  .page-deli .range-wrapper {
+    padding: 0 6rem; }
+    .page-deli .range-wrapper .wp-caption {
+      padding: 1.5rem; }
+
+.color-boxes-wrapper {
+  padding: 0; }
+  .color-boxes-wrapper .color-box {
+    width: 50%;
+    width: calc(50% - 2rem);
+    margin: 1rem; }
+
+.black-box {
+  padding: 1rem; }
+
+.blog-wrapper .text span {
+  font-size: 1.15em; }
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap > div {
+  max-width: 760px; }
+
+.flex {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .flex .flex-panel {
+    width: 33.333%; }
+
+.gallery.gallery-columns-2 .gallery-item {
+  width: 50%; }
+
+.row.single-content {
+  background: #e5e5e5;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .row.single-content .col-12 {
+    padding: 3rem 7rem;
+    background: #fff; }
+.row.image-left > .cf, .row.image-right > .cf {
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+.row.text-block .col-12 {
+  padding: 3.5rem; }
+.row.text-block.tb-yellow .col-12 img {
+  margin-top: -6.5rem;
+  margin-bottom: 0; }
+.row.text-block.tb-blue-01 h2 {
+  width: 50%; }
+.row.text-block.tb-teal .col-12 h2 {
+  margin-top: -6rem; }
+.row.text-block .offset-lb {
+  margin: 0 2rem -6rem -7rem; }
+.row.text-block.tb-list ul {
+  padding-right: 0;
+  float: left;
+  width: 40%; }
+.row.text-block.tb-list img {
+  float: right;
+  max-width: 50%; }
+.row.text-block.narrow {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto; }
+.row.border-t-b .col-6:first-child {
+  padding-right: 0; }
+  .row.border-t-b .col-6:first-child .wp-caption-text {
+    bottom: -23px;
+    top: auto; }
+.row.border-t-b .col-6:last-child {
+  padding: 5rem; }
+  .row.border-t-b .col-6:last-child .deli {
+    max-width: 75%; }
+.row.street-two-col .col-6:last-child, .row.roots-two-col .col-6:last-child {
+  padding: 5rem 0 0 0; }
+  .row.street-two-col .col-6:last-child p, .row.roots-two-col .col-6:last-child p {
+    max-width: 70%;
+    margin: 0; }
+.row.roots-two-col .col-6 h2 {
+  margin: 1rem 0 !important; }
+.row.street-two-col {
+  text-align: left; }
+
+.equal-height .col-6 {
+  border: 1.5rem solid #fff; }
+  .equal-height .col-6 img {
+    margin-top: 3rem !important; }
+    .equal-height .col-6 img:first-child {
+      margin-top: 0 !important; }
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 25%; }
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+#sidebar1 {
+  padding-right: 2rem; }
+
+.widgettitle {
+  border-bottom: 2px solid #000;
+  margin-bottom: 0.75em; }
+
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0; }
+  .widget ul li {
+    margin-bottom: 0.75em; }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
+
+/*********************
+FOOTER STYLES
+*********************/
+.social-footer {
+  margin: 2rem 2rem 0;
+  transform: none;
+  font-size: 1.3rem; }
+
+.footer-logo {
+  margin: 0;
+  transform: none; }
+
+.footer-nav .nav {
+  margin: 1.5rem; }
+
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Desktop Stylsheet
+
+******************************************************************/
+html {
+  font-size: 16px; }
+
+/*********************
+HEADER STYLES
+*********************/
+.body:not(.is-mobile) .header {
+  background: black;
+  max-height: 4rem; }
+  .body:not(.is-mobile) .header.scrolled .primary-nav li.menu-logo a {
+    background-position: 9px -120px;
+    height: 77px; }
+.body:not(.is-mobile) #inner-header {
+  position: relative; }
+  .body:not(.is-mobile) #inner-header > .cf {
+    max-width: 1400px;
+    margin: auto; }
+.body:not(.is-mobile) .logo {
+  display: none; }
+.body:not(.is-mobile) .searchbox {
+  width: 100%;
+  max-width: 15rem;
+  right: 3.25rem; }
+  .body:not(.is-mobile) .searchbox:hover, .body:not(.is-mobile) .searchbox:focus {
+    border: none;
+    max-width: 15rem; }
+.body:not(.is-mobile) .social-fixed {
+  top: 130px; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.body:not(.is-mobile) .menu-button {
+  display: none; }
+.body:not(.is-mobile) .main-nav {
+  margin: 0; }
+.body:not(.is-mobile) .primary-nav {
+  position: relative;
+  right: auto;
+  top: auto;
+  max-height: none;
+  background: none;
+  overflow: visible;
+  text-align: center;
+  font-size: 0;
+  visibility: visible;
+  opacity: 1;
+  /* end .menu li */
+  /* highlight current page */ }
+  .body:not(.is-mobile) .primary-nav li {
+    position: relative;
+    width: 14%;
+    font-size: 1rem;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    vertical-align: top; }
+    .body:not(.is-mobile) .primary-nav li.menu-logo {
+      display: inline-block;
+      z-index: 10; }
+      .body:not(.is-mobile) .primary-nav li.menu-logo a {
+        display: block;
+        padding: 0;
+        width: 160px;
+        height: 125px;
+        margin: -.5rem auto 0;
+        background-image: url("../images/logo-sprite.png");
+        background-repeat: no-repeat;
+        background-position: 9px 0;
+        background-size: 280px;
+        line-height: 0;
+        color: transparent;
+        font-size: 0;
+        -webkit-transition: all 0.14s ease-out;
+        transition: all 0.14s ease-out; }
+    .body:not(.is-mobile) .primary-nav li.menu-item-has-children.active ul.sub-menu,
+    .body:not(.is-mobile) .primary-nav li.menu-item-has-children.active ul.children, .body:not(.is-mobile) .primary-nav li.menu-item-has-children:focus-within ul.sub-menu,
+    .body:not(.is-mobile) .primary-nav li.menu-item-has-children:focus-within ul.children, .body:not(.is-mobile) .primary-nav li.menu-item-has-children:hover ul.sub-menu,
+    .body:not(.is-mobile) .primary-nav li.menu-item-has-children:hover ul.children, .body:not(.is-mobile) .primary-nav li.menu-item-has-children:focus ul.sub-menu,
+    .body:not(.is-mobile) .primary-nav li.menu-item-has-children:focus ul.children {
+      visibility: visible !important;
+      opacity: 1 !important;
+      max-height: 100% !important; }
+  .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a {
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+    font-size: 1.25em;
+    font-weight: 500;
+    border: none;
+    padding: 1em 0;
+    -webkit-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out; }
+    .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a br {
+      display: block; }
+    .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a:hover, .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a:focus {
+      color: #9fc938; }
+  .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu,
+  .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children {
+    width: 100%;
+    height: 100%;
+    max-height: 0%;
+    left: 0;
+    top: auto;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0;
+    background: none;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    /* highlight sub-menu current page */ }
+    .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu.active,
+    .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children.active {
+      visibility: visible !important;
+      opacity: 1 !important;
+      max-height: 100% !important; }
+    .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li,
+    .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li {
+      vertical-align: middle;
+      text-align: left;
+      display: inline-block;
+      padding: 0 2rem;
+      border: none;
+      width: 25%;
+      height: 100%;
+      height: 100vh;
+      position: relative; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li:before,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li:before {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: '';
+        position: absolute;
+        width: calc(100% - 4rem);
+        height: calc(100% - 20rem);
+        margin: 7rem 0; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-core,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-core {
+        background: #e6ad19; }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-core:before,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-core:before {
+          background-image: url(../images/menu-core.jpg); }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-core a,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-core a {
+          background: #cb5120; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-deli,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-deli {
+        background: #bedbd9; }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-deli:before,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-deli:before {
+          background-image: url(../images/menu-deli.jpg); }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-deli a,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-deli a {
+          color: #000;
+          background: #f3f8f6; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-roots,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-roots {
+        background: #004635; }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-roots:before,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-roots:before {
+          background-image: url(../images/menu-roots.jpg); }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-roots a,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-roots a {
+          background: #acc435; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-street,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-street {
+        background: #e40134; }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-street:before,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-street:before {
+          background-image: url(../images/menu-street.jpg); }
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li.menu-street a,
+        .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li.menu-street a {
+          background: #37499a; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li a,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li a {
+        display: block;
+        position: absolute;
+        padding: 1rem;
+        z-index: 100;
+        width: 100%;
+        width: calc(100% - 4rem);
+        color: #fff;
+        font-size: 2rem;
+        font-size: 1.9vw;
+        bottom: 15%;
+        left: 1rem; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li .menu-item-description,
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li .menu-item-description {
+        display: block;
+        font-size: 1rem;
+        font-family: "Cera Pro", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        min-height: 7rem; }
+  .body:not(.is-mobile) .primary-nav > li.current_page_item > a,
+  .body:not(.is-mobile) .primary-nav > li.current-menu-ancestor > a,
+  .body:not(.is-mobile) .primary-nav > li.current-menu-item > a,
+  .body:not(.is-mobile) .primary-nav > li.current_page_ancestor > a {
+    color: #9fc938; }
+.body:not(.is-mobile) .mobile-links {
+  display: none !important; }
+
+.body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu li .menu-item-description, .body:not(.is-mobile) .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children li .menu-item-description {
+  min-height: 5rem; }
+
+/*********************
+CONTENT STYLES
+*********************/
+.body:not(.is-mobile) #content {
+  padding-top: 4rem; }
+
+.wrap > div {
+  max-width: 930px; }
+
+.page-deli .range-wrapper .wp-caption {
+  padding: 3rem; }
+
+.color-boxes-wrapper .color-box {
+  width: calc(50% - 6rem);
+  margin: 3rem; }
+
+.row.street-two-col .col-6:last-child, .row.roots-two-col .col-6:last-child {
+  padding: 0; }
+.row.post-content .posts-continued {
+  width: 60%;
+  float: left; }
+.row.post-content .post.main-post, .row.post-content [id*="post-"].main-post {
+  width: 100%; }
+  .row.post-content .post.main-post .thumb, .row.post-content [id*="post-"].main-post .thumb {
+    width: 58%;
+    width: calc(60% - 1rem);
+    float: left;
+    margin-right: 1rem; }
+  .row.post-content .post.main-post .text, .row.post-content [id*="post-"].main-post .text {
+    width: 40%;
+    float: right;
+    padding: 0 2rem;
+    font-size: 1.5rem; }
+    .row.post-content .post.main-post .text .excerpt, .row.post-content [id*="post-"].main-post .text .excerpt {
+      font-size: 1.2rem; }
+
+.row.roots-two-col .col-6 h2 {
+  margin-top: 10rem !important; }
+
+.cat-list {
+  width: 35%;
+  float: left; }
+
+/******************************************************************
+ADDITIONAL IE FIXES
+For more info on using Modernizr classes:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example:
+
+.no-textshadow .class { ... }
+
+Can also target specific versions by using the classes applied to
+the html element. Check header.php file to see what they are:
+
+.lt-ie8 .class { ... }
+
+*/

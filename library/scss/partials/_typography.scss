@@ -1,0 +1,92 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Typography
+
+******************************************************************/
+
+/*********************
+FONTFACE
+*********************/
+
+// Kapra Neue
+
+@font-face {
+    font-family: 'Kapra Neue';
+    src: url('../../fonts/KapraNeuePro-RegularRd.woff2') format('woff2'),
+        url('../../fonts/KapraNeuePro-RegularRd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kapra Neue';
+    src: url('../../fonts/KapraNeuePro-MediumRd.woff2') format('woff2'),
+        url('../../fonts/KapraNeuePro-MediumRd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kapra Neue';
+    src: url('../../fonts/KapraNeuePro-SemiBoldRd.woff2') format('woff2'),
+        url('../../fonts/KapraNeuePro-SemiBoldRd.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kapra Neue';
+    src: url('../../fonts/KapraNeuePro-BoldRd.woff2') format('woff2'),
+        url('../../fonts/KapraNeuePro-BoldRd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+// Cera Pro
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../../fonts/CeraPro-Bold.woff2') format('woff2'),
+        url('../../fonts/CeraPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../../fonts/CeraPro-Medium.woff2') format('woff2'),
+        url('../../fonts/CeraPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../../fonts/CeraPro-Regular.woff2') format('woff2'),
+        url('../../fonts/CeraPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../../fonts/CeraPro-Light.woff2') format('woff2'),
+        url('../../fonts/CeraPro-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+// font stacks
+$kapra:        'Kapra Neue', Helvetica, Arial, sans-serif;
+$cera:         'Cera Pro', Helvetica, Arial, sans-serif;
+
+%kapra {
+    font-family: "Kapra Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1;
+}
