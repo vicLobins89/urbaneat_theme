@@ -1,1 +1,1 @@
-Kenex WP (WooCommerce) Theme
+UrbanEat Theme
