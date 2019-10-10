@@ -648,14 +648,13 @@ LAYOUT & GRID STYLES
             }
             
             @media only screen and (max-width: 767px) {
-                padding: 5rem 2rem !important;
+                padding: 5rem 2rem 10rem !important;
+                background-size: 178% !important;
                 
                 .page-about-us & {
                     &:first-child {
                         padding-top: 15rem !important;
-                        padding-bottom: 15rem !important;
-                        background-size: 200% !important;
-                        background-position: left bottom !important;
+                        padding-bottom: 10rem !important;
                     }
                 }
                 
@@ -690,7 +689,7 @@ LAYOUT & GRID STYLES
                 background: $orange;
                 
                 .page-about-us & {
-                    background: $dark-orange;
+                    background: $orange-01;
                 }
             }
         }
@@ -738,7 +737,7 @@ LAYOUT & GRID STYLES
                 background: $teal;
                 
                 .page-contact-us & {
-                    background: #84bba2;
+                    background: #71c4a7;
                 }
                 
                 h2 {
@@ -749,7 +748,7 @@ LAYOUT & GRID STYLES
         
         &.tb-red-01 {
             .col-12 {
-                background: $red-01;
+                background: #c40055;
                 padding-right: 0;
                 
                 img {
@@ -760,7 +759,7 @@ LAYOUT & GRID STYLES
         
         &.tb-red-02 {
             .col-12 {
-                background: $red-02;   
+                background: #c40055;
                 
                 h2 {
                     font-size: 2.5rem;
@@ -898,6 +897,26 @@ LAYOUT & GRID STYLES
         
         .offset-lb {
             margin: 0 0 -4rem 0;
+        }
+        
+        h2 {
+            &.gfx:before {
+                content: '';
+                position: absolute;
+                width: 60px;
+                height: 54px;
+                background-size: contain !important;
+                top: 0;
+                right: 0;
+
+            }
+            &.bench:before {
+                background: url(../images/gfx-bench.png) no-repeat center;
+            }
+            &.sitting-man:before {
+                background: url(../images/gfx-sitting-man-01.png) no-repeat center;
+
+            }
         }
     }
     
@@ -1093,6 +1112,12 @@ LAYOUT & GRID STYLES
             p {
                 font-size: 1.2em;
             }
+        }
+    }
+    
+    &.hospitality {
+        @media only screen and (max-width: 767px) {
+            background-position: 60% center !important;
         }
     }
 }
@@ -1747,10 +1772,6 @@ NAVIGATION STYLES
         .menu-item-description {
             display: none;
         }
-        
-        &.menu-item-has-children {
-            
-        }
 	}
 
 	> li {
@@ -1786,6 +1807,22 @@ NAVIGATION STYLES
                 }
 			}
 		}
+        
+        &.menu-item-has-children > a {
+            position: static;
+            @extend %expand-arrow;
+            
+            &:before, &:after {
+                top: 25px;
+                right: 20px;
+            }
+
+            &.active {
+                &:before, &:after {
+                    background: $pale-green;
+                }
+            }
+        }
 
 		ul.sub-menu,
 		ul.children {
@@ -2063,6 +2100,10 @@ POSTS & CONTENT STYLES
         color: white;
         font-size: 1.2rem;
         margin: 0;
+        
+        .home & {
+            font-size: 1.3rem;
+        }
     }
 }
 
@@ -2165,7 +2206,7 @@ POSTS & CONTENT STYLES
         }
         
         &.red {
-            background: $red;
+            background: $orange-01;
             
             h2 {
                 color: $white;
@@ -2328,6 +2369,11 @@ POSTS & CONTENT STYLES
             max-width: 100%;
             width: auto;
             
+            &.wp-image-253,
+            &.wp-image-255 {
+                max-width: 43%;
+            }
+            
             &.wp-image-251,
             &.wp-image-247 {
                 max-width: 60%;
@@ -2336,11 +2382,15 @@ POSTS & CONTENT STYLES
             
             &.wp-image-17574,
             &.wp-image-17551,
-            &.wp-image-253,
             &.wp-image-254,
             &.wp-image-17532,
             &.wp-image-348 {
                 max-width: 65%;
+            }
+            
+            &.wp-image-271,
+            &.wp-image-272 {
+                max-width: 70%;
             }
         }
         
@@ -2578,37 +2628,7 @@ POSTS & CONTENT STYLES
         margin-bottom: 1rem;
         position: relative;
         cursor: pointer;
-        
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            display: block;
-            background: $black;
-            width: 1rem;
-            height: 3px;
-            top: 18px;
-            right: 8px;
-            @include transition(transform 0.2s ease-in-out);
-        }
-        
-        &:before {
-            transform: rotate(45deg);
-        }
-        
-        &:after {
-            transform: rotate(-45deg) translate(7px, 7px);
-        }
-        
-        &.active {
-            &:before {
-                transform: rotate(-45deg);
-            }
-
-            &:after {
-                transform: rotate(45deg) translate(7px, -7px);
-            }
-        }
+        @extend %expand-arrow;
     }
     
     .cat-wrapper {

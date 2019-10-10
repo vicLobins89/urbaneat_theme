@@ -655,17 +655,30 @@ Author: Vic Lobins
 
 Stylesheet: Button Styles
 
-Helpful Links:
-http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
-
 ******************************************************************/
 /*********************
 BUTTON DEFAULTS
-
-Quick video guide:
-http://www.youtube.com/watch?v=hwdVpKiJzac
-
 *********************/
+.primary-nav > li.menu-item-has-children > a:before, .cat-list h4:before, .primary-nav > li.menu-item-has-children > a:after, .cat-list h4:after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: #000;
+  width: 16px;
+  height: 3px;
+  top: 18px;
+  right: 8px;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; }
+.primary-nav > li.menu-item-has-children > a:before, .cat-list h4:before {
+  transform: rotate(45deg); }
+.primary-nav > li.menu-item-has-children > a:after, .cat-list h4:after {
+  transform: rotate(-45deg) translate(7px, 7px); }
+.primary-nav > li.menu-item-has-children > a.active:before, .cat-list h4.active:before {
+  transform: rotate(-45deg); }
+.primary-nav > li.menu-item-has-children > a.active:after, .cat-list h4.active:after {
+  transform: rotate(45deg) translate(7px, -7px); }
+
 .primary-btn, .image-link + p, .image-link .wp-caption-text, .vid-thumb .play, a.comment-reply-link, #submit, a.primary-btn, .secondary-btn, .search input[type="submit"], a.secondary-btn {
   position: relative;
   min-width: 11em;
@@ -710,12 +723,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
       background-color: transparent;
       color: #fff; }
   .primary-btn.red, .image-link + p.red, .image-link .red.wp-caption-text, .vid-thumb .red.play, a.red.comment-reply-link, .red#submit, a.primary-btn.red, .image-link a.red.wp-caption-text, .vid-thumb a.red.play, a.red.comment-reply-link, a.red#submit {
-    border-color: #c14322;
-    background: #c14322;
+    border-color: #e94e1b;
+    background: #e94e1b;
     color: #fff; }
     .primary-btn.red:hover, .image-link + p.red:hover, .image-link .red.wp-caption-text:hover, .vid-thumb .red.play:hover, a.red.comment-reply-link:hover, .red#submit:hover, .primary-btn.red:focus, .image-link + p.red:focus, .image-link .red.wp-caption-text:focus, .vid-thumb .red.play:focus, a.red.comment-reply-link:focus, .red#submit:focus, .wp-caption:hover .primary-btn.red, .wp-caption:hover .image-link + p.red, .wp-caption:hover .image-link .red.wp-caption-text, .image-link .wp-caption:hover .red.wp-caption-text, .wp-caption:hover .vid-thumb .red.play, .vid-thumb .wp-caption:hover .red.play, .wp-caption:hover a.red.comment-reply-link, .wp-caption:hover .red#submit, a.primary-btn.red:hover, .image-link a.red.wp-caption-text:hover, .vid-thumb a.red.play:hover, a.red.comment-reply-link:hover, a.red#submit:hover, a.primary-btn.red:focus, .image-link a.red.wp-caption-text:focus, .vid-thumb a.red.play:focus, a.red.comment-reply-link:focus, a.red#submit:focus, .wp-caption:hover a.primary-btn.red, .wp-caption:hover .image-link a.red.wp-caption-text, .image-link .wp-caption:hover a.red.wp-caption-text, .wp-caption:hover .vid-thumb a.red.play, .vid-thumb .wp-caption:hover a.red.play, .wp-caption:hover a.red.comment-reply-link, .wp-caption:hover a.red#submit {
       background-color: transparent;
-      color: #c14322; }
+      color: #e94e1b; }
   .primary-btn.blue, .image-link + p.blue, .image-link .blue.wp-caption-text, .vid-thumb .blue.play, a.blue.comment-reply-link, .blue#submit, a.primary-btn.blue, .image-link a.blue.wp-caption-text, .vid-thumb a.blue.play, a.blue.comment-reply-link, a.blue#submit {
     border-color: #306aa1;
     background: #306aa1;
@@ -1636,12 +1649,11 @@ LAYOUT & GRID STYLES
         font-weight: 600; }
   @media only screen and (max-width: 767px) {
     .row.text-block.tb-blue, .row.text-block.tb-orange, .row.text-block.tb-green, .row.text-block.tb-yellow {
-      padding: 5rem 2rem !important; }
+      padding: 5rem 2rem 10rem !important;
+      background-size: 178% !important; }
       .page-about-us .row.text-block.tb-blue:first-child, .page-about-us .row.text-block.tb-orange:first-child, .page-about-us .row.text-block.tb-green:first-child, .page-about-us .row.text-block.tb-yellow:first-child {
         padding-top: 15rem !important;
-        padding-bottom: 15rem !important;
-        background-size: 200% !important;
-        background-position: left bottom !important; }
+        padding-bottom: 10rem !important; }
       .row.text-block.tb-blue .col-12 h2, .row.text-block.tb-orange .col-12 h2, .row.text-block.tb-green .col-12 h2, .row.text-block.tb-yellow .col-12 h2 {
         font-size: 3em;
         font-size: 11vw;
@@ -1659,7 +1671,7 @@ LAYOUT & GRID STYLES
   .row.text-block.tb-orange .col-12 p, .row.text-block.tb-green .col-12 p {
     color: #fff; }
   .page-about-us .row.text-block.tb-orange .col-12, .page-about-us .row.text-block.tb-green .col-12 {
-    background: #cb4f24; }
+    background: #e94e1b; }
 .row.text-block.tb-green .cf, .row.text-block.tb-green .comment-respond {
   max-width: 780px; }
 .row.text-block.tb-green .col-12 {
@@ -1679,7 +1691,7 @@ LAYOUT & GRID STYLES
 .row.text-block.tb-teal .col-12 {
   background: #0fa69d; }
   .page-contact-us .row.text-block.tb-teal .col-12 {
-    background: #84bba2; }
+    background: #71c4a7; }
   .row.text-block.tb-teal .col-12 h2 {
     margin-top: -4rem; }
 .row.text-block.tb-red-01 .col-12 {
@@ -1688,7 +1700,7 @@ LAYOUT & GRID STYLES
   .row.text-block.tb-red-01 .col-12 img {
     margin-top: 25%; }
 .row.text-block.tb-red-02 .col-12 {
-  background: #c7345c; }
+  background: #c40055; }
   .row.text-block.tb-red-02 .col-12 h2 {
     font-size: 2.5rem; }
 .row.text-block.tb-list .cf, .row.text-block.tb-list .comment-respond {
@@ -1777,6 +1789,18 @@ LAYOUT & GRID STYLES
     margin: 0 auto 6rem; }
 .row.text-block .offset-lb {
   margin: 0 0 -4rem 0; }
+.row.text-block h2.gfx:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 54px;
+  background-size: contain !important;
+  top: 0;
+  right: 0; }
+.row.text-block h2.bench:before {
+  background: url(../images/gfx-bench.png) no-repeat center; }
+.row.text-block h2.sitting-man:before {
+  background: url(../images/gfx-sitting-man-01.png) no-repeat center; }
 .row.bg-contain {
   background-size: contain !important; }
 .row.bg-25 {
@@ -1879,6 +1903,9 @@ LAYOUT & GRID STYLES
       color: #000; }
     .row.contact-form .social-footer p {
       font-size: 1.2em; }
+@media only screen and (max-width: 767px) {
+  .row.hospitality {
+    background-position: 60% center !important; } }
 
 .gray-box {
   padding: 1rem;
@@ -2351,6 +2378,13 @@ NAVIGATION STYLES
           max-height: 100%;
           max-height: 100vh;
           visibility: visible; }
+    .primary-nav > li.menu-item-has-children > a {
+      position: static; }
+      .primary-nav > li.menu-item-has-children > a:before, .primary-nav > li.menu-item-has-children > a:after {
+        top: 25px;
+        right: 20px; }
+      .primary-nav > li.menu-item-has-children > a.active:before, .primary-nav > li.menu-item-has-children > a.active:after {
+        background: #9fc938; }
     .primary-nav > li ul.sub-menu,
     .primary-nav > li ul.children {
       background: #e5e5e5;
@@ -2541,6 +2575,8 @@ POSTS & CONTENT STYLES
     color: white;
     font-size: 1.2rem;
     margin: 0; }
+    .home .featured-copy p, .home .featured-copy .p {
+      font-size: 1.3rem; }
 
 .heading-street {
   font-family: "Kapra Neue", Helvetica, Arial, sans-serif;
@@ -2617,7 +2653,7 @@ POSTS & CONTENT STYLES
         min-height: 18rem;
         margin-top: -2rem; }
     .color-boxes-wrapper .color-box.red {
-      background: #c14322; }
+      background: #e94e1b; }
       .color-boxes-wrapper .color-box.red h2 {
         color: #fff; }
     .color-boxes-wrapper .color-box.blue {
@@ -2723,11 +2759,15 @@ POSTS & CONTENT STYLES
     .range-wrapper .wp-caption img {
       max-width: 100%;
       width: auto; }
+      .range-wrapper .wp-caption img.wp-image-253, .range-wrapper .wp-caption img.wp-image-255 {
+        max-width: 43%; }
       .range-wrapper .wp-caption img.wp-image-251, .range-wrapper .wp-caption img.wp-image-247 {
         max-width: 60%;
         max-height: 240px; }
-      .range-wrapper .wp-caption img.wp-image-17574, .range-wrapper .wp-caption img.wp-image-17551, .range-wrapper .wp-caption img.wp-image-253, .range-wrapper .wp-caption img.wp-image-254, .range-wrapper .wp-caption img.wp-image-17532, .range-wrapper .wp-caption img.wp-image-348 {
+      .range-wrapper .wp-caption img.wp-image-17574, .range-wrapper .wp-caption img.wp-image-17551, .range-wrapper .wp-caption img.wp-image-254, .range-wrapper .wp-caption img.wp-image-17532, .range-wrapper .wp-caption img.wp-image-348 {
         max-width: 65%; }
+      .range-wrapper .wp-caption img.wp-image-271, .range-wrapper .wp-caption img.wp-image-272 {
+        max-width: 70%; }
     .page-hot-food .range-wrapper .wp-caption {
       width: 50% !important; }
     .page-roots .range-wrapper .wp-caption {
@@ -2889,25 +2929,6 @@ POSTS & CONTENT STYLES
     margin-bottom: 1rem;
     position: relative;
     cursor: pointer; }
-    .cat-list h4:before, .cat-list h4:after {
-      content: '';
-      position: absolute;
-      display: block;
-      background: #000;
-      width: 1rem;
-      height: 3px;
-      top: 18px;
-      right: 8px;
-      -webkit-transition: transform 0.2s ease-in-out;
-      transition: transform 0.2s ease-in-out; }
-    .cat-list h4:before {
-      transform: rotate(45deg); }
-    .cat-list h4:after {
-      transform: rotate(-45deg) translate(7px, 7px); }
-    .cat-list h4.active:before {
-      transform: rotate(-45deg); }
-    .cat-list h4.active:after {
-      transform: rotate(45deg) translate(7px, -7px); }
   .cat-list .cat-wrapper {
     max-height: 0px;
     overflow: hidden;
@@ -3827,6 +3848,8 @@ DESKTOP
         display: block; }
       .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a:hover, .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a:focus {
         color: #9fc938; }
+      .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a:before, .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) > a:after {
+        content: none !important; }
     .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.sub-menu,
     .body:not(.is-mobile) .primary-nav > li:not(.menu-logo) ul.children {
       width: 100%;
@@ -3867,7 +3890,9 @@ DESKTOP
           position: absolute;
           width: calc(100% - 4rem);
           height: calc(100% - 20rem);
+          height: calc(100% - 23vh);
           margin: 7rem 0;
+          margin: 6vh 0;
           transform-origin: center;
           -webkit-transition: transform 0.2s ease-in-out;
           transition: transform 0.2s ease-in-out; }

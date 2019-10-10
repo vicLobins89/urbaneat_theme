@@ -145,6 +145,11 @@ NAVIGATION STYLES
 			&:focus {
 				color: $pale-green;
             }
+            
+            &:before,
+            &:after {
+                content: none !important;
+            }
 		}
 
 		ul.sub-menu,
@@ -186,7 +191,9 @@ NAVIGATION STYLES
                     position: absolute;
                     width: calc(100% - 4rem);
                     height: calc(100% - 20rem);
+                    height: calc(100% - 23vh);
                     margin: 7rem 0;
+                    margin: 6vh 0;
                     transform-origin: center;
                     @include transition(transform 0.2s ease-in-out);
                 }

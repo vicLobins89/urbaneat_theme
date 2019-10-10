@@ -4,18 +4,45 @@ Author: Vic Lobins
 
 Stylesheet: Button Styles
 
-Helpful Links:
-http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
-
 ******************************************************************/
 
 /*********************
 BUTTON DEFAULTS
-
-Quick video guide:
-http://www.youtube.com/watch?v=hwdVpKiJzac
-
 *********************/
+
+
+%expand-arrow {
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background: $black;
+        width: 16px;
+        height: 3px;
+        top: 18px;
+        right: 8px;
+        @include transition(transform 0.2s ease-in-out);
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg) translate(7px, 7px);
+    }
+
+    &.active {
+        &:before {
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            transform: rotate(45deg) translate(7px, -7px);
+        }
+    }
+}
 
 %btn {
 	position: relative;
@@ -39,18 +66,17 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     outline: none;
 	@include transition(all 0.2s ease-in-out);
 
-	// hovering on the btn
 	&:hover, &:focus {
 		color: $white;
 		text-decoration: none;
-	} // end hover
+	}
 	
 	a {
 		color: inherit !important;
 		text-decoration: inherit !important;
 	}
 
-} // end .button
+}
 
 .primary-btn, a.primary-btn {
 	@extend %btn;
@@ -79,15 +105,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	}
     
     &.red {
-        border-color: $red;
-		background: $red;
+        border-color: $orange-01;
+		background: $orange-01;
 		color: $white;
 		
 		&:hover,
 		&:focus,
 		.wp-caption:hover & {
 			background-color: transparent;
-			color: $red;
+			color: $orange-01;
 		}
     }
     
